@@ -15,15 +15,16 @@ interface Props {
  Could perhaps be replaced with more a more fancy state management regime
  */
 export function MainContent(props: Props) {
-  const stations = combineStationInfoWithStatus(
-    props.stationStatus,
-    props.stationInfo,
-  );
   const [tab, setTab] = useState('map');
 
   const tabUpdated = (e: React.ChangeEvent<HTMLInputElement>) => {
     setTab(e.target.value);
   };
+
+  const stations = combineStationInfoWithStatus(
+    props.stationStatus,
+    props.stationInfo,
+  );
 
   return (
     <>

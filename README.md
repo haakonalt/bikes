@@ -1,6 +1,6 @@
 # Bysykkel
 
-Enkel applikasjon som viser tilgjengelige bysykler i et kart og i en liste.
+Enkel applikasjon som viser tilgjengelige bysykler i et kart og i en liste. Appen kan sees her: https://reverent-goldberg-b59152.netlify.app/
 
 
 ## Howto
@@ -65,7 +65,7 @@ Endte opp med to separate states for hvert API-kall i App.tsx. Er kanskje ikke n
 potensielt ville kalle station_status endpoint på et intervall (basert på `ttl` i response). station_information ser jeg
 for meg er relativt statisk.
 
-Applikasjonen har to "modus", kartvisning og liste.
+Applikasjonen har to "modus", kartvisning og liste. 
 
 ### Kartvisning
 
