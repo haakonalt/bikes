@@ -1,25 +1,21 @@
-# New Project
+# Bysykkel
 
-> ✨ Bootstrapped with Create Snowpack App (CSA).
+## tilnærming
 
-## Available Scripts
+- hvem er brukerne og hvilke behov har de?
+  - borgere som ønsker å flytte seg fra A til B
+  - ansatte som jobber med å flytte sykler
+  - ansatte som ønsker å forbedre logistikk/flyt (innsiktsarbeid, data science?)
+- utforsket API'et
+- umiddelbar idé: visualisere stasjoner i et kart, med farge som indikerer tilgjengelighet
+- laster ned station_information.json og konverterer til GEOJSON. visualiserer på http://geojson.io/
+  - verifiserer at alt ser tilsynelatende ok ut i kartet, at jeg ikke har byttet om lat/lon osv.
+    ![geojson.io](./docs/geojson.png)
+    
 
-### npm start
+## Løsning
 
-Runs the app in the development mode.
-Open http://localhost:8080 to view it in the browser.
-
-The page will reload if you make edits.
-You will also see any lint errors in the console.
-
-### npm run build
-
-Builds a static copy of your site to the `build/` folder.
-Your app is ready to be deployed!
-
-**For the best production performance:** Add a build bundler plugin like "@snowpack/plugin-webpack" to your `snowpack.config.mjs` config file.
-
-### npm test
-
-Launches the application test runner.
-Run with the `--watch` flag (`npm test -- --watch`) to run in interactive watch mode.
+- vise stasjoner i et kart med tall + fargekode
+  - bruker tall istedenfor fargekoder mtp fargeblind
+- bruke https://oslobysykkel.no/apne-data/historisk for å vise trender / sannsynlighet for tilgjengelighet?
+  - kanskje skape en kul visualisering av reiser med https://eng.uber.com/keplergl/  ?
