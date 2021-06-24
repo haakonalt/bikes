@@ -2,7 +2,7 @@ import React from 'react';
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import type { Station } from '../common/station';
-import type {LatLngExpression} from "leaflet";
+import type { LatLngExpression } from 'leaflet';
 
 export function BikeMap({ stations }: { stations: Station[] }) {
   const center: LatLngExpression = [stations[0].lat, stations[1].lon];

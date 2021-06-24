@@ -32,13 +32,69 @@ topp, men kom ikke helt i mål med sorteringen, da jeg ønsker å holde meg inne
 
 ## Potensielle features
 
-
 ### Logistikk optimalisering
+
 Mye potensiale for å optimalisere logistikken for å fylle opp sykkelstativer. Ser for meg at man kan identifisere to
 stasjoner i nærheten av hverandre der én stasjoner mangler sykler og en annen er full. Kan videre analysere historiske
 data på https://oslobysykkel.no/apne-data/historisk og se på reiseruter og forutse når enkelte stasjoner blir tomme. Ser
 f.eks. for meg at noen stasjoner tømmes på morgenen på vei til jobb, og man får en generell flyt av sykler mot sentrum.
 
+## teknologi
+
+- react
+- snowpack
+- typescript
+- leaflet
+- material UI
+
+Batteries included uten å måtte tenke på styling. Lot applikasjonen bevisst være relativt ustyla. Av erfaring ville 2
+timers rammen bli brukt opp veldig fort om jeg starter med dette.
+
+## Beskrivelse av løsning
+
+Gikk for en relativt enkel app uten noen form for statehåndtering. Separarte ut API-kallene og typene i egen mappe, og
+mapper til min egen datastruktur som kombinerer to API-kall:
+
+- https://gbfs.urbansharing.com/oslobysykkel.no/station_status.json
+- https://gbfs.urbansharing.com/oslobysykkel.no/station_information.json
+
+Wrapper begge requests med  `Promise.all` slik at de kalles samtidig.
+
+Endte opp med to separate states for hvert API-kall i App.tsx. Er kanskje ikke nødvendig, men så for meg at jeg
+potensielt ville kalle station_status endpoint på et intervall (basert på `ttl` i response). station_information ser jeg
+for meg er relativt statisk.
+
+Applikasjonen har to "modus":
+
+### Kartvisning
+
+rendrer kart med leaflet og viser frem alle stasjonene. Hver stasjon er klikkbar med info om ledige sykler / kapasitet.
+Her kan nok brukeropplevelsen forbedres endel, men rakk ikke å sette meg så mye inn i leaflet API'et. 
+
+### Liste
+
+enkel tabell som viser de aktuelle dataene sortert på ledige sykler. Her så jeg for meg at kolonnene kan være klikkbare med sortering, men kom ikke så langt.
+## TODOS
+
+2 timer går fort, så er et par punkter jeg gjerne skulle hatt på plass før jeg blir fornøyd
+
+- validere API response
+
+sjekker verken statuskode eller struktur. Bør kaste exceptions hvis dette ikke er ok. Har tidligere
+brukt https://github.com/pelotom/runtypes til dette formålet. Slik kan jeg definere en typestruktur og validere den
+objekter runtime basert på den. Synes det er viktig å validere data i I/O boundaries slik at jeg kan stole på typene i
+resten av koden.
+
+- error boundary
+
+javascript exceptions bør kræsje appen, ellers risikerer vi veldig forvirra brukere som får en halveis rendra side eller
+annen rar oppførsel.
+
+- forskjellige ikoner i kartet for å indikere status
+
+Så for meg enten forskjellige farger eller ikoner basert på hvorvidt stasjoner har sykler eller ikke. Viktig å tenke på fargeblinde om jeg går for farge, så derfor tenkte jeg det var best med forskjellige ikoner.
+
+- stasjoner klikkbare i liste for å gå til kart
 
 ## Howto
 
