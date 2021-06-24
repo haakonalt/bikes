@@ -2,6 +2,16 @@
 
 Enkel applikasjon som viser tilgjengelige bysykler i et kart og i en liste.
 
+
+## Howto
+
+For å kjøre applikasjonen i dev mode:
+
+```
+npm install
+npm start
+```
+
 ## Oppgave
 
 Skriv en liten applikasjon som viser en liste over de ulike stasjonene, og hvor mange tilgjengelige låser og ledige
@@ -30,14 +40,6 @@ lagde jeg også en enkel tabellvisning som presenterte dataene.
 Tanken var at de kan da f.eks. kan sortere kolonner slik at kun stasjoner som er fulle eller har ingen sykler vises på
 topp, men kom ikke helt i mål med sorteringen, da jeg ønsker å holde meg innenfor tidsbegrensningen på 2 timer.
 
-## Potensielle features
-
-### Logistikk optimalisering
-
-Mye potensiale for å optimalisere logistikken for å fylle opp sykkelstativer. Ser for meg at man kan identifisere to
-stasjoner i nærheten av hverandre der én stasjoner mangler sykler og en annen er full. Kan videre analysere historiske
-data på https://oslobysykkel.no/apne-data/historisk og se på reiseruter og forutse når enkelte stasjoner blir tomme. Ser
-f.eks. for meg at noen stasjoner tømmes på morgenen på vei til jobb, og man får en generell flyt av sykler mot sentrum.
 
 ## teknologi
 
@@ -96,11 +98,12 @@ Så for meg enten forskjellige farger eller ikoner basert på hvorvidt stasjoner
 
 - stasjoner klikkbare i liste for å gå til kart
 
-## Howto
+## Potensielle features
 
-For å kjøre applikasjonen i dev mode:
+### Logistikk optimalisering
 
-```
-npm install
-npm start
-```
+Mye potensiale for å optimalisere logistikken for å fylle opp sykkelstativer. Ser for meg at man kan identifisere to
+stasjoner i nærheten av hverandre der én stasjoner mangler sykler og en annen er full. Kan videre analysere historiske
+data på https://oslobysykkel.no/apne-data/historisk og se på reiseruter og forutse når enkelte stasjoner blir tomme. Ser
+f.eks. for meg at noen stasjoner tømmes på morgenen på vei til jobb, og man får en generell flyt av sykler mot sentrum.
+
