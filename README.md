@@ -48,13 +48,12 @@ topp, men kom ikke helt i mål med sorteringen, da jeg ønsker å holde meg inne
 - typescript
 - leaflet
 - material UI
-
-Batteries included uten å måtte tenke på styling. Lot applikasjonen bevisst være relativt ustyla. Av erfaring ville 2
+- Batteries included uten å måtte tenke på styling. Lot applikasjonen bevisst være relativt ustyla. Av erfaring ville 2
 timers rammen bli brukt opp veldig fort om jeg starter med dette.
 
 ## Beskrivelse av løsning
 
-Gikk for en relativt enkel app uten noen form for statehåndtering. Separarte ut API-kallene og typene i egen mappe, og
+Gikk for en relativt enkel app uten noen form for statehåndtering. Separerte ut API-kallene og typene i egen mappe, og
 mapper til min egen datastruktur som kombinerer to API-kall:
 
 - https://gbfs.urbansharing.com/oslobysykkel.no/station_status.json
@@ -66,7 +65,7 @@ Endte opp med to separate states for hvert API-kall i App.tsx. Er kanskje ikke n
 potensielt ville kalle station_status endpoint på et intervall (basert på `ttl` i response). station_information ser jeg
 for meg er relativt statisk.
 
-Applikasjonen har to "modus":
+Applikasjonen har to "modus", kartvisning og liste.
 
 ### Kartvisning
 
