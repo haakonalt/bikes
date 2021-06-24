@@ -14,7 +14,7 @@ interface StationInfo {
   capacity: number;
 }
 
-interface StationInforList {
+interface StationInfoList {
   stations: StationInfo[];
 }
 
