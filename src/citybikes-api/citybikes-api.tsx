@@ -1,7 +1,7 @@
 export const fetchStationStatus = async (): Promise<
   ApiResponse<StationStatusList>
 > => {
-  const response = await fetch('https://gbfs.urbansharing.com/oslobysykkel.no//station_status.json', {
+  const response = await fetch('https://gbfs.urbansharing.com/oslobysykkel.no/station_status.json', {
     headers: {
       'Client-Identifier': 'https://github.com/haakondr/citybikes',
     },
@@ -16,7 +16,7 @@ export const fetchStationStatus = async (): Promise<
 export const fetchStationInfo = async (): Promise<
   ApiResponse<StationInfoList>
 > => {
-  const response = await fetch('https://gbfs.urbansharing.com/oslobysykkel.no//station_information.json', {
+  const response = await fetch('https://gbfs.urbansharing.com/oslobysykkel.no/station_information.json', {
     headers: {
       'Client-Identifier': 'https://github.com/haakondr/citybikes',
     },
