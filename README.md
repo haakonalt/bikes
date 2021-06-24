@@ -48,10 +48,10 @@ topp, men kom ikke helt i mål med sorteringen, da jeg ønsker å holde meg inne
 - typescript
 - leaflet
 - material UI
-- Batteries included uten å måtte tenke på styling. Lot applikasjonen bevisst være relativt ustyla. Av erfaring ville 2
-timers rammen bli brukt opp veldig fort om jeg starter med dette.
 
 ## Beskrivelse av løsning
+
+Lot applikasjonen bevisst være relativt ustyla. Av erfaring ville 2 timers rammen bli brukt opp veldig fort om jeg startet med dette.
 
 Gikk for en relativt enkel app uten noen form for statehåndtering. Separerte ut API-kallene og typene i egen mappe, og
 mapper til min egen datastruktur som kombinerer to API-kall:
