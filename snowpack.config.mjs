@@ -30,7 +30,6 @@ export default {
     /* ... */
   },
   buildOptions: {
-    baseUrl: "bikes",
     /* ... */
   },
 };
