@@ -5,7 +5,7 @@ export const fetchStationStatus = async (): Promise<
     'https://gbfs.urbansharing.com/oslobysykkel.no/station_status.json',
     {
       headers: {
-        'Client-Identifier': 'https://github.com/haakondr/citybikes',
+        'Client-Identifier': 'https://github.com/haakonalt/citybikes',
       },
     },
   );
@@ -23,7 +23,7 @@ export const fetchStationInfo = async (): Promise<
     'https://gbfs.urbansharing.com/oslobysykkel.no/station_information.json',
     {
       headers: {
-        'Client-Identifier': 'https://github.com/haakondr/citybikes',
+        'Client-Identifier': 'https://github.com/haakonalt/citybikes',
       },
     },
   );
