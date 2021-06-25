@@ -10,8 +10,6 @@ export function BikeMap({ stations }: { stations: Station[] }) {
 
   return (
     <>
-      <h2>bike map</h2>
-
       <MapContainer zoom={17} center={center} scrollWheelZoom={true}>
         <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
