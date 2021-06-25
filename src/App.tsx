@@ -34,7 +34,9 @@ function App({}: AppProps) {
     <div className="App">
       <Container>
         <h1>Oslo bysykkel</h1>
-          <p>Her kan du få on oversikt over tilgjengelige bysykler i Oslo kommune. </p>
+        <p>
+          Her kan du få on oversikt over tilgjengelige bysykler i Oslo kommune.{' '}
+        </p>
         {stationInformation && stationInformation ? (
           <MainContent
             stationStatus={stationStatus!}

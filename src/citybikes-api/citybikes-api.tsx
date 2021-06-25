@@ -1,12 +1,14 @@
+const headers = {
+  'Client-Identifier': 'https://github.com/haakonalt/citybikes',
+};
+
 export const fetchStationStatus = async (): Promise<
   ApiResponse<StationStatusList>
 > => {
   const response = await fetch(
     'https://gbfs.urbansharing.com/oslobysykkel.no/station_status.json',
     {
-      headers: {
-        'Client-Identifier': 'https://github.com/haakonalt/citybikes',
-      },
+      headers: headers,
     },
   );
 
@@ -22,9 +24,7 @@ export const fetchStationInfo = async (): Promise<
   const response = await fetch(
     'https://gbfs.urbansharing.com/oslobysykkel.no/station_information.json',
     {
-      headers: {
-        'Client-Identifier': 'https://github.com/haakonalt/citybikes',
-      },
+      headers: headers,
     },
   );
 
