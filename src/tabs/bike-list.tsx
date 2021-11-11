@@ -29,8 +29,12 @@ export const BikeList = ({ stations }: { stations: Station[] }) => {
           {stationsSorted.map((s) => (
             <TableRow key={s.station_id} data-testid="bike-list-row">
               <TableCell data-testid="station-name">{s.name}</TableCell>
-              <TableCell data-testid="station-bikes-available">{s.num_bikes_available}</TableCell>
-              <TableCell data-testid="station-docks-available">{s.num_docks_available}</TableCell>
+              <TableCell data-testid="station-bikes-available">
+                {s.num_bikes_available}
+              </TableCell>
+              <TableCell data-testid="station-docks-available">
+                {s.num_docks_available}
+              </TableCell>
               <TableCell data-testid="station-capacity">{s.capacity}</TableCell>
             </TableRow>
           ))}

@@ -10,14 +10,18 @@ export function BikeMap({ stations }: { stations: Station[] }) {
 
   return (
     <>
-      <MapContainer zoom={17} center={center} scrollWheelZoom={true} >
+      <MapContainer zoom={17} center={center} scrollWheelZoom={true}>
         <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         {stations.map((s) => {
           return (
-            <Marker key={s.station_id} position={[s.lat, s.lon]} data-testid="map-station-marker">
+            <Marker
+              key={s.station_id}
+              position={[s.lat, s.lon]}
+              data-testid="map-station-marker"
+            >
               <Popup>
                 <h3 data-testid="map-marker-popup">
                   {s.name} {s.num_bikes_available} / {s.capacity}

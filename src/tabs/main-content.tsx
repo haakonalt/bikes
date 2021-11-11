@@ -35,8 +35,18 @@ export function MainContent(props: Props) {
         value={tab}
         onChange={tabUpdated}
       >
-        <FormControlLabel data-testid="tab-selection-map" value="map" control={<Radio />} label="Kart" />
-        <FormControlLabel data-testid="tab-selection-list" value="list" control={<Radio />} label="Liste" />
+        <FormControlLabel
+          data-testid="tab-selection-map"
+          value="map"
+          control={<Radio />}
+          label="Kart"
+        />
+        <FormControlLabel
+          data-testid="tab-selection-list"
+          value="list"
+          control={<Radio />}
+          label="Liste"
+        />
       </RadioGroup>
 
       {/*quick and dirty routing/tab behaviour..*/}
