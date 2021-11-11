@@ -1,5 +1,18 @@
 .leaflet-container {
-  width: 80%;
-  height: 70vh;
-  margin: auto;
+    width: 80%;
+    height: 70vh;
+    margin: auto;
 }
+
+@media only screen and (max-width: 600px) {
+    .leaflet-container {
+        width: 100%;
+    }
+
+    .MuiTableCell-root.MuiTableCell-body,
+    .MuiTableCell-root.MuiTableCell-head {
+        padding: 6px;
+    }
+}
+
+
