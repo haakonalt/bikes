@@ -12,6 +12,14 @@ npm install
 npm start
 ```
 
+### Tests
+
+```
+npm test
+```
+
+Forutsetter at applikasjonen kjører på http://localhost:8080
+
 ## Oppgave
 
 Skriv en liten applikasjon som viser en liste over de ulike stasjonene, og hvor mange tilgjengelige låser og ledige

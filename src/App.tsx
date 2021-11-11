@@ -33,7 +33,7 @@ function App({}: AppProps) {
   return (
     <div className="App">
       <Container>
-        <h1>Oslo bysykkel</h1>
+        <h1 data-testid="title">Oslo bysykkel</h1>
         <p>
           Her kan du få on oversikt over tilgjengelige bysykler i Oslo kommune.{' '}
         </p>

@@ -15,7 +15,7 @@ export const BikeList = ({ stations }: { stations: Station[] }) => {
     (a, b) => b.num_bikes_available - a.num_bikes_available,
   );
   return (
-    <TableContainer component={Paper}>
+    <TableContainer component={Paper} data-testid="bike-list">
       <Table>
         <TableHead>
           <TableRow>
@@ -27,11 +27,11 @@ export const BikeList = ({ stations }: { stations: Station[] }) => {
         </TableHead>
         <TableBody>
           {stationsSorted.map((s) => (
-            <TableRow key={s.station_id}>
-              <TableCell>{s.name}</TableCell>
-              <TableCell>{s.num_bikes_available}</TableCell>
-              <TableCell>{s.num_docks_available}</TableCell>
-              <TableCell>{s.capacity}</TableCell>
+            <TableRow key={s.station_id} data-testid="bike-list-row">
+              <TableCell data-testid="station-name">{s.name}</TableCell>
+              <TableCell data-testid="station-bikes-available">{s.num_bikes_available}</TableCell>
+              <TableCell data-testid="station-docks-available">{s.num_docks_available}</TableCell>
+              <TableCell data-testid="station-capacity">{s.capacity}</TableCell>
             </TableRow>
           ))}
         </TableBody>
