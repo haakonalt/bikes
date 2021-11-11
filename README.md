@@ -3,23 +3,6 @@
 Enkel applikasjon som viser tilgjengelige bysykler i et kart og i en liste. Appen kan sees her: https://reverent-goldberg-b59152.netlify.app/
 
 
-## Howto
-
-For å kjøre applikasjonen i dev mode:
-
-```
-npm install
-npm start
-```
-
-### Tests
-
-```
-npm test
-```
-
-Forutsetter at applikasjonen kjører på http://localhost:8080
-
 ## Oppgave
 
 Skriv en liten applikasjon som viser en liste over de ulike stasjonene, og hvor mange tilgjengelige låser og ledige
@@ -114,3 +97,28 @@ stasjoner i nærheten av hverandre der én stasjoner mangler sykler og en annen 
 data på https://oslobysykkel.no/apne-data/historisk og se på reiseruter og forutse når enkelte stasjoner blir tomme. Ser
 f.eks. for meg at noen stasjoner tømmes på morgenen på vei til jobb, og man får en generell flyt av sykler mot sentrum.
 
+## Continuous Integration / Delivery
+
+Alle kodeendringer på github trigger en github action som kjører tester og deployer applikasjonen til netlify hvis testene passerer.
+
+Tester er satt opp med https://www.cypress.io/ for å maksimere testdekning på færrest mulige tester.
+
+
+## Howto
+
+For å kjøre applikasjonen i dev mode:
+
+```
+npm install
+npm start
+```
+
+Appen vil da være tilgjengelig på http://localhost:8080/
+
+### Tests
+
+```
+npm test
+```
+
+Forutsetter at applikasjonen kjører på http://localhost:8080
