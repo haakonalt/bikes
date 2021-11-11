@@ -22,6 +22,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@master
+    - name: build
+      run: npm run build
 
     - name: Publish
       uses: netlify/actions/cli@master
