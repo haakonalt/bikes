@@ -19,7 +19,7 @@ export const combineStationInfoWithStatus = (
   );
 
   return stationStatus.data.stations.map((s) => {
-    let info = stationInfoMap[s.station_id];
+    const info = stationInfoMap[s.station_id];
     return {
       station_id: s.station_id,
       name: info.name,

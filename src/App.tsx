@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import { BikeMap } from './tabs/bike-map';
 import {
   fetchStationInfo,
   fetchStationStatus,
 } from './citybikes-api/citybikes-api';
-import { combineStationInfoWithStatus } from './common/station';
 import { MainContent } from './tabs/main-content';
 import { Container } from '@material-ui/core';
 

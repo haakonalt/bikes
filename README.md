@@ -68,25 +68,25 @@ Her kan nok brukeropplevelsen forbedres endel, men rakk ikke å sette meg så my
 enkel tabell som viser de aktuelle dataene sortert på ledige sykler. Her så jeg for meg at kolonnene kan være klikkbare med sortering, men kom ikke så langt.
 ## TODOS
 
-2 timer går fort, så er et par punkter jeg gjerne skulle hatt på plass før jeg blir fornøyd
+2 timer går fort, så er et par punkter jeg gjerne skulle hatt på plass før jeg blir fornøyd:
 
-- validere API response
+### validere API response
 
 sjekker verken statuskode eller struktur. Bør kaste exceptions hvis dette ikke er ok. Har tidligere
-brukt https://github.com/pelotom/runtypes til dette formålet. Slik kan jeg definere en typestruktur og validere den
+brukt https://github.com/pelotom/runtypes til dette formålet. Slik kan jeg definere en typestruktur og validere
 objekter runtime basert på den. Synes det er viktig å validere data i I/O boundaries slik at jeg kan stole på typene i
 resten av koden.
 
-- error boundary
+### error boundary
 
 javascript exceptions bør kræsje appen, ellers risikerer vi veldig forvirra brukere som får en halveis rendra side eller
 annen rar oppførsel.
 
-- forskjellige ikoner i kartet for å indikere status
+### forskjellige ikoner i kartet for å indikere status
 
 Så for meg enten forskjellige farger eller ikoner basert på hvorvidt stasjoner har sykler eller ikke. Viktig å tenke på fargeblinde om jeg går for farge, så derfor tenkte jeg det var best med forskjellige ikoner.
 
-- stasjoner klikkbare i liste for å gå til kart
+### stasjoner klikkbare i liste for å gå til kart
 
 ## Potensielle features
 
@@ -97,11 +97,15 @@ stasjoner i nærheten av hverandre der én stasjoner mangler sykler og en annen 
 data på https://oslobysykkel.no/apne-data/historisk og se på reiseruter og forutse når enkelte stasjoner blir tomme. Ser
 f.eks. for meg at noen stasjoner tømmes på morgenen på vei til jobb, og man får en generell flyt av sykler mot sentrum.
 
+## Testdekning
+
+Oppgave 2 gikk ut på å skrive tester til applikasjonen. For å maksimere testdekning på minst mulig tid gikk jeg for UI-baserte "klikk-tester" ved hjelp av https://www.cypress.io/.
+
+
 ## Continuous Integration / Delivery
 
 Alle kodeendringer på github trigger en github action som kjører tester og deployer applikasjonen til netlify hvis testene passerer.
 
-Tester er satt opp med https://www.cypress.io/ for å maksimere testdekning på færrest mulige tester.
 
 
 ## Howto
