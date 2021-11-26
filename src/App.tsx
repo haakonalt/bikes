@@ -33,11 +33,11 @@ function App({}: AppProps) {
       <Container>
         <h1 data-testid="title">Oslo bysykkel</h1>
         <p>
-          Her kan du få on oversikt over tilgjengelige bysykler i Oslo kommune.{' '}
+          Her kan du få on oversikt over tilgjengelige bysykler i Oslo kommune.
         </p>
-        {stationInformation && stationInformation ? (
+        {stationInformation && stationStatus ? (
           <MainContent
-            stationStatus={stationStatus!}
+            stationStatus={stationStatus}
             stationInfo={stationInformation}
           />
         ) : (
